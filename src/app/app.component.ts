@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-maps-project';
+ latitude= 54.331613;
+ longitude= 18.633065;
+
+ onChoseLocation(event){
+   console.log(event);
+   this.latitude=event.coords.lat;
+   this.longitude=event.coords.lng;
+ }
 }
